@@ -1,0 +1,39 @@
+
+<table  class="table table-bordered table-responsive table-condensed" cellspacing="0" width="100%" border="1px;">
+  <thead>
+    <tr class="thead-dark text-center">
+      
+     
+      <th (click)="sortID('mobId')" >Mobile Id</th>
+      <th (click)="sortName('mobName')">Mobile Name</th>
+      <th (click)="sortPrice('mobPrice')">Mobile Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody class="text-center" *ngIf="resData?.length">
+    <ng-container *ngFor="
+        let m of resData;
+        let i = index">
+      <tr>
+        <!-- <td scope="row">{{i+1}}</td> -->
+        <td>{{ m.mobId }}</td>
+        <td>{{ m.mobName }}</td>
+        <td>{{ m.mobPrice | currency:USD}}</td>
+
+
+        <td>
+          <button class="btn-primary" (click)="deleteRow(m)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table> 
+
+
+
+  
+
+

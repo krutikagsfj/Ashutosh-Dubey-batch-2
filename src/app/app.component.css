@@ -1,0 +1,13 @@
+table {
+  width: 60%;
+  background-color:thistle;
+  border-block-end: 3cm;
+}
+thead{
+  background-color: black;
+  color:white;
+
+}
+th {
+  cursor: pointer;
+}
